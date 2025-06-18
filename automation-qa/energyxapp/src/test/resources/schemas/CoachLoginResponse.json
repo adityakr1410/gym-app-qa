@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "token": {
+          "type": "string"
+        },
+        "userData": {
+          "type": "object",
+          "properties": {
+            "specialization": {
+              "type": "array",
+              "items": {}
+            },
+            "_id": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "firstName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            },
+            "role": {
+              "type": "string"
+            },
+            "certificates": {
+              "type": "array",
+              "items": {}
+            },
+            "upcomingWorkouts": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "specialization",
+            "_id",
+            "email",
+            "firstName",
+            "lastName",
+            "role",
+            "certificates",
+            "upcomingWorkouts"
+          ]
+        }
+      },
+      "required": [
+        "token",
+        "userData"
+      ]
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "status",
+    "data",
+    "message"
+  ]
+}

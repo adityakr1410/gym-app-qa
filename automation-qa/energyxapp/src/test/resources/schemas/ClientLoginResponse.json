@@ -1,0 +1,72 @@
+{
+  "type": "object",
+  "required": ["status", "data", "message"],
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object",
+      "required": ["token", "userData"],
+      "properties": {
+        "token": {
+          "type": "string"
+        },
+        "userData": {
+          "type": "object",
+          "required": [
+            "_id",
+            "email",
+            "firstName",
+            "lastName",
+            "preferableActivity",
+            "target",
+            "role",
+            "createdAt",
+            "updatedAt",
+            "__v"
+          ],
+          "properties": {
+            "_id": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string",
+              "format": "email"
+            },
+            "firstName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            },
+            "preferableActivity": {
+              "type": "string"
+            },
+            "target": {
+              "type": "string"
+            },
+            "role": {
+              "type": "string",
+              "enum": ["client"]
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updatedAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "__v": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "message": {
+      "type": "string"
+    }
+  }
+}
